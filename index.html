@@ -51,7 +51,7 @@
       "@type": "SoftwareApplication",
       "@id": "https://infinireel.com/#app",
       "name": "Infinireel",
-      "description": "Windows desktop app that turns one short nature clip into a seamless YouTube video from 1 minute to 24 hours, plus Shorts and square posts with on-screen calls to action, and writes titles, descriptions and tags for YouTube, TikTok, Instagram, Facebook and Pinterest.",
+      "description": "Windows desktop app that turns one short nature clip into a seamless YouTube video from 1 minute to 24 hours, plus Shorts and square posts with on-screen calls to action (or only the 9:16 and 1:1 clips from any wide video), and writes titles, descriptions and tags for YouTube, TikTok, Instagram, Facebook and Pinterest.",
       "applicationCategory": "MultimediaApplication",
       "applicationSubCategory": "Video editing",
       "operatingSystem": "Windows 10, Windows 11 (64-bit)",
@@ -230,6 +230,37 @@
   .tbl-note{color:var(--muted);font-size:.88rem;margin:12px 0 0}
   @media (max-width:560px){th,td{padding:12px 12px}.ba{font-size:.92rem}}
 
+  /* Highlights */
+  .hl{list-style:none;padding:0;margin:26px 0 0;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .hl li{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:12px;padding:20px}
+  .hl strong{display:block;font-size:1.05rem;margin-bottom:6px}
+  .hl span{color:var(--muted);font-size:.93rem;display:block}
+  @media (max-width:960px){.hl{grid-template-columns:1fr 1fr}}
+  @media (max-width:520px){.hl{grid-template-columns:1fr}}
+  a.fn{color:var(--accent2);text-decoration:none;font-weight:700;margin-left:1px}
+  .disclaimer{margin-top:14px;padding:14px 18px;border-left:3px solid var(--line);color:var(--muted);font-size:.9rem;background:rgba(255,255,255,.02);border-radius:0 10px 10px 0}
+
+  /* Test stats */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+  .stat .num{display:block;font-size:clamp(2rem,4.5vw,2.7rem);font-weight:800;line-height:1.05;color:var(--accent2);margin-bottom:8px}
+  .stat .lbl{color:var(--muted);font-size:.95rem;display:block}
+  @media (max-width:900px){.stats{grid-template-columns:1fr 1fr}}
+
+  /* Vertical-only */
+  .split{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center}
+  .split .lead{margin-bottom:22px}
+  .ticks{list-style:none;padding:0;margin:0}
+  .ticks li{padding:7px 0 7px 28px;position:relative}
+  .ticks li::before{content:"";position:absolute;left:2px;top:14px;width:14px;height:8px;border-left:2px solid var(--accent);border-bottom:2px solid var(--accent);transform:rotate(-45deg)}
+  .frames{display:flex;align-items:center;justify-content:center;gap:14px}
+  .fr{border:2px solid var(--accent);border-radius:10px;display:grid;place-items:center;background:rgba(47,181,132,.08);color:var(--accent2);font-weight:700;font-size:.85rem;text-align:center}
+  .fr.wide{width:150px;height:72px;border-color:var(--line);color:var(--muted);background:var(--card)}
+  .fr.tall{width:68px;height:120px}
+  .fr.sq{width:90px;height:90px}
+  .arrow{color:var(--accent);font-size:1.6rem}
+  @media (max-width:820px){.split{grid-template-columns:1fr}.fr.wide{width:110px;height:56px}.fr.tall{width:54px;height:96px}.fr.sq{width:72px;height:72px}}
+
   /* Use-case chips */
   .chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:860px;margin:0 auto}
   .chip{padding:9px 16px;border-radius:999px;border:1px solid var(--line);background:var(--card);font-size:.95rem}
@@ -287,6 +318,22 @@
   },
   {
    "@type": "Question",
+   "name": "How long does an 8-hour video take to render?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "In our test, an 8-hour 4K Master plus eight short clips took about 11 minutes, on the processor alone without a graphics card. That is one test, not a guarantee: times vary with your computer, your clip and the lengths and outputs you choose."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can I use it just to turn wide videos into Shorts and Reels?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. Untick the Master and Infinireel makes only the 9:16 and 1:1 clips. It works with landscape, ultra-wide and other odd-sized footage: drag a box to choose what stays in frame."
+   }
+  },
+  {
+   "@type": "Question",
    "name": "Does it only work with nature clips?",
    "acceptedAnswer": {
     "@type": "Answer",
@@ -314,7 +361,7 @@
    "name": "What do I need to run it?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "Windows 10 or 11 (64-bit); there's no Mac version yet. You'll also need enough free disk space for your videos (an 8-hour 4K Master takes tens of gigabytes; Infinireel tells you before it starts). A graphics card from NVIDIA or AMD makes rendering faster, but isn't required. No administrator rights needed to install."
+    "text": "Windows 10 or 11 (64-bit); there's no Mac version yet. You'll also need enough free disk space for your videos (an 8-hour 4K Master took about 100 GB in our test; Infinireel tells you the size before it starts). A graphics card from NVIDIA or AMD makes rendering faster, but isn't required. No administrator rights needed to install."
    }
   },
   {
@@ -387,6 +434,24 @@
       <p class="fine"><span>Windows 10 and 11</span> · <span>No subscription</span> · <span>Free trial at launch, no card</span></p>
     </div>
   </div>
+
+  <!-- Highlights -->
+  <section id="highlights" aria-labelledby="hl-h">
+    <div class="wrap">
+      <p class="eyebrow">Highlights</p>
+      <h2 id="hl-h">Infinireel at a glance</h2>
+      <ul class="hl">
+        <li><strong>Up to 24 hours</strong><span>Seamless 4K YouTube Masters, with 1, 3 and 8 hours one click away</span></li>
+        <li><strong>8 h of 4K in about 11 min<a class="fn" href="#render-note" aria-label="See the note on render times">*</a></strong><span>Plus eight short clips, in our test on the processor alone</span></li>
+        <li><strong>Shorts, Reels, square</strong><span>9:16 and 1:1 clips from 15 s to 3 minutes, framed by dragging a box</span></li>
+        <li><strong>Vertical clips only</strong><span>Or skip the long video and just reframe wide footage into 9:16 and 1:1</span></li>
+        <li><strong>On-screen calls to action</strong><span>Welcome, subscribe and closing lines, kept readable and clear of app buttons</span></li>
+        <li><strong>AI titles for 6 platforms</strong><span>YouTube, Shorts, TikTok, Instagram, Facebook and Pinterest, within each one's limits</span></li>
+        <li><strong>Offline on your PC</strong><span>No uploads, no cloud fees, no queue. Windows 10 and 11</span></li>
+        <li><strong>Pay once, 2 PCs</strong><span>$79 one-time ($49 for the first 100 buyers), 12 months of updates</span></li>
+      </ul>
+    </div>
+  </section>
 
   <!-- Problems -->
   <section id="why" aria-labelledby="why-h">
@@ -473,6 +538,22 @@
     </div>
   </section>
 
+  <!-- Real test -->
+  <section id="tested" aria-labelledby="tested-h">
+    <div class="wrap">
+      <p class="eyebrow">Real render, real numbers</p>
+      <h2 id="tested-h">8 hours of 4K in about 11 minutes<a class="fn" href="#render-note" aria-label="See the note on render times">*</a></h2>
+      <p class="lead">One 55-second clip in. A seamless 8-hour 4K YouTube Master and eight short clips out, all with their calls to action, in a single run, on the processor alone, without a graphics card.</p>
+      <div class="stats">
+        <div class="stat"><span class="num">8 h</span><span class="lbl">4K Master (3840×2160) from a 55-second clip</span></div>
+        <div class="stat"><span class="num">8</span><span class="lbl">short clips: 15 s, 30 s, 60 s and 3 min, each in 9:16 and 1:1</span></div>
+        <div class="stat"><span class="num">16</span><span class="lbl">subscribe reminders, one every 30 minutes, plus welcome and closing lines</span></div>
+        <div class="stat"><span class="num">11 min<a class="fn" href="#render-note" aria-label="See the note on render times">*</a></span><span class="lbl">for everything, start to finish, processor only</span></div>
+      </div>
+      <p class="disclaimer" id="render-note"><strong>* About render times:</strong> rendering speed is hardware dependent. These figures come from our own test render on October 30, 2026, on a Windows PC using its processor (no graphics card). They are not a guarantee: they come from one test on one PC, and your times will vary with your computer (processor, graphics card, memory, disk speed and free space), the source clip (resolution, length, frame rate, content), the lengths and number of outputs you choose, and anything else running at the same time.</p>
+    </div>
+  </section>
+
   <!-- 3. What you get -->
   <section id="features">
     <div class="wrap">
@@ -488,12 +569,12 @@
         <div class="feature">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="18" rx="1.5"/><rect x="13" y="7" width="8" height="8" rx="1.5"/></svg></div>
           <h3>Shorts and square posts</h3>
-          <p>9:16 and 1:1 clips of 30 s, 60 s or up to 3 minutes. Drag a box over your clip to frame each one.</p>
+          <p>9:16 and 1:1 clips of 15 s, 30 s, 60 s or up to 3 minutes. Drag a box over your clip to frame each one.</p>
         </div>
         <div class="feature">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
           <h3>Calls to action on screen</h3>
-          <p>A welcome line, a subscribe reminder halfway (or every 15–60 minutes on long videos) and a closing line, in your own style. Kept clear of each platform's buttons and captions.</p>
+          <p>A welcome line, a subscribe reminder halfway (or every 15–60 minutes on long videos) and a closing line, in your own style. Kept clear of each platform's buttons and captions, with a soft backdrop added automatically when the background is bright, so the text stays readable.</p>
         </div>
         <div class="feature">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h10M4 17h13"/></svg></div>
@@ -515,6 +596,31 @@
     </div>
   </section>
 
+  <!-- Vertical-only use -->
+  <section id="vertical" aria-labelledby="vertical-h">
+    <div class="wrap">
+      <div class="split">
+        <div>
+          <p class="eyebrow">Only need vertical clips?</p>
+          <h2 id="vertical-h">Turn wide videos into Shorts, Reels and square posts</h2>
+          <p class="lead">You don't have to make a long video at all. Untick the Master and use Infinireel just to reframe wide or odd-sized footage (landscape, ultra-wide, drone or 4:3) into 9:16 and 1:1 clips.</p>
+          <ul class="ticks">
+            <li>Drag a box to choose what stays in frame for each format</li>
+            <li>Lengths of 15 s, 30 s, 60 s or up to 3 minutes</li>
+            <li>Your on-screen text, kept clear of each app's buttons</li>
+            <li>Captions written for YouTube Shorts, TikTok, Instagram, Facebook and Pinterest</li>
+          </ul>
+        </div>
+        <div class="frames" aria-hidden="true">
+          <div class="fr wide"><span>Wide or odd size</span></div>
+          <div class="arrow">→</div>
+          <div class="fr tall"><span>9:16</span></div>
+          <div class="fr sq"><span>1:1</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Before / after -->
   <section id="before-after" aria-labelledby="ba-h">
     <div class="wrap">
@@ -525,7 +631,7 @@
         <table class="ba">
           <thead><tr><th scope="col">Job</th><th scope="col">The usual way</th><th scope="col" class="us">With Infinireel</th></tr></thead>
           <tbody>
-            <tr><td class="task">8-hour video</td><td class="old">Loop it in an editor, wait for a long export, check for the seam</td><td class="new us">Pick 8 hours. A seamless 4K loop, rendered on your PC</td></tr>
+            <tr><td class="task">8-hour video</td><td class="old">Loop it in an editor, wait for a long export, check for the seam</td><td class="new us">Pick 8 hours. A seamless 4K loop, rendered on your PC (about 11 minutes in our test, with all the short clips<a class="fn" href="#render-note" aria-label="See the note on render times">*</a>)</td></tr>
             <tr><td class="task">Shorts, Reels, square posts</td><td class="old">Re-crop and export each one separately</td><td class="new us">Drag a box per format; all render in the same pass</td></tr>
             <tr><td class="task">Subscribe reminders</td><td class="old">Add text by hand to every video</td><td class="new us">Welcome, subscribe and closing lines on every format, kept clear of each app's buttons</td></tr>
             <tr><td class="task">Titles, descriptions, tags</td><td class="old">Write them for each platform and count characters</td><td class="new us">AI writes them for six platforms, sized to each one's limits</td></tr>
@@ -685,6 +791,14 @@
           <p>Yes. The 9:16 clips work for YouTube Shorts, TikTok and Instagram Reels, and the square clips for feeds. Infinireel writes the captions for each platform.</p>
         </details>
         <details>
+          <summary>How long does an 8-hour video take to render?</summary>
+          <p>In our test, an 8-hour 4K Master plus eight short clips took about 11 minutes, on the processor alone without a graphics card. That is one test, not a guarantee: times vary with your computer, your clip and the lengths and outputs you choose.</p>
+        </details>
+        <details>
+          <summary>Can I use it just to turn wide videos into Shorts and Reels?</summary>
+          <p>Yes. Untick the Master and Infinireel makes only the 9:16 and 1:1 clips. It works with landscape, ultra-wide and other odd-sized footage: drag a box to choose what stays in frame.</p>
+        </details>
+        <details>
           <summary>Does it only work with nature clips?</summary>
           <p>It works with any short clip, but it's made for nature and ambient footage, where gentle motion makes the loop invisible.</p>
         </details>
@@ -698,7 +812,7 @@
         </details>
         <details>
           <summary>What do I need to run it?</summary>
-          <p>Windows 10 or 11 (64-bit); there's no Mac version yet. You'll also need enough free disk space for your videos (an 8-hour 4K Master takes tens of gigabytes; Infinireel tells you before it starts). A graphics card from NVIDIA or AMD makes rendering faster, but isn't required. No administrator rights needed to install.</p>
+          <p>Windows 10 or 11 (64-bit); there's no Mac version yet. You'll also need enough free disk space for your videos (an 8-hour 4K Master took about 100 GB in our test; Infinireel tells you the size before it starts). A graphics card from NVIDIA or AMD makes rendering faster, but isn't required. No administrator rights needed to install.</p>
         </details>
         <details>
           <summary>What is FFmpeg, and why does it download?</summary>
@@ -735,6 +849,7 @@
 
 <footer>
   <div class="wrap">
+    <p style="flex-basis:100%;margin:0 0 6px;font-size:.85rem">Rendering speed depends on your hardware (processor, graphics card, memory and disk) as well as your clip and settings. Render times and file sizes on this page come from our own tests and are not a guarantee. Features and prices may change before launch.</p>
     <div>Infinireel is made by QuantumStream Ventures Ltd., Canada. © <span id="yr">2026</span></div>
     <div class="flinks">
       <a href="mailto:hello@infinireel.com">hello@infinireel.com</a>
