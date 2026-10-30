@@ -58,9 +58,12 @@
       "url": "https://infinireel.com/",
       "image": "https://infinireel.com/images/logo-512.png",
       "screenshot": [
-        "https://infinireel.com/images/step2.jpg",
-        "https://infinireel.com/images/step3.jpg",
-        "https://infinireel.com/images/step5.jpg"
+        "https://infinireel.com/images/screenshots/01_compose.jpg",
+        "https://infinireel.com/images/screenshots/06_any_clip_shape.jpg",
+        "https://infinireel.com/images/screenshots/04_publish.jpg",
+        "https://infinireel.com/images/screenshots/03_review.jpg",
+        "https://infinireel.com/images/screenshots/02_ctas_per_format.jpg",
+        "https://infinireel.com/images/screenshots/05_quick_start.jpg"
       ],
       "publisher": {"@id": "https://infinireel.com/#org"},
       "offers": [
@@ -262,6 +265,23 @@
   .split > *{min-width:0}
   @media (max-width:380px){.frames{gap:8px}.fr.wide{width:86px;height:48px;font-size:.75rem}.fr.tall{width:44px;height:78px}.fr.sq{width:60px;height:60px}.arrow{font-size:1.2rem}}
   @media (max-width:820px){.split{grid-template-columns:1fr}.fr.wide{width:110px;height:56px}.fr.tall{width:54px;height:96px}.fr.sq{width:72px;height:72px}}
+
+  /* Hero screenshot */
+  .hero-shot{max-width:1000px;margin:44px auto 0;position:relative}
+  .hero-shot img{width:100%;height:auto;display:block}
+  .hero-shot figcaption{color:var(--muted);font-size:.9rem;margin-top:12px}
+  .spotlights{margin:56px 0 0}
+  .spotlights .eyebrow{margin-bottom:6px}
+  .spotlights img{width:100%;height:auto;display:block}
+
+  /* Screens gallery */
+  .gallery{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+  .gal{margin:0;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+  .gal img{width:100%;height:auto;display:block;border-bottom:1px solid var(--line)}
+  .gal a{display:block}
+  .gal figcaption{padding:16px 20px 20px;color:var(--muted);font-size:.95rem}
+  .gal figcaption strong{display:block;color:var(--text);font-size:1.08rem;margin-bottom:6px}
+  @media (max-width:820px){.gallery{grid-template-columns:1fr}}
 
   /* Use-case chips */
   .chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:860px;margin:0 auto}
@@ -469,6 +489,7 @@
         <a class="btn btn-ghost" href="mailto:hello@infinireel.com?subject=Tell%20me%20when%20Infinireel%20launches">Get launch news by email</a>
       </div>
       <p class="fine"><span>Windows 10 and 11</span> · <span>No subscription</span> · <span>Free trial at launch, no card</span></p>
+      <figure class="hero-shot"><img class="shot" src="images/screenshots/01_compose.jpg" width="1920" height="1080" alt="Infinireel Compose page: Master set to 8 hours, Shorts and Social clips at 30 seconds, and the Crop Preview showing a forest waterfall framed in 16:9, 9:16 and 1:1 with on-screen text" fetchpriority="high"><figcaption>One clip, three formats, framed in one place: the Compose page with the Crop Preview.</figcaption></figure>
     </div>
   </div>
 
@@ -659,6 +680,32 @@
           <p>No account, no uploads, no tracking. Only the license check, the one-time FFmpeg download and the AI requests you click leave your PC.</p>
         </div>
       </div>
+      <div class="screens spotlights">
+        <div class="screen">
+          <div class="txt">
+            <p class="eyebrow">Any clip shape</p>
+            <h3>Phone video? Odd size? It still fits.</h3>
+            <p>Clips that aren't 16:9, vertical phone videos included, are zoomed to fill the frame or placed on a soft blurred copy of themselves. The Crop Preview tells you what it did, and there are no black bars unless you want them.</p>
+          </div>
+          <img class="shot" src="images/screenshots/06_any_clip_shape.jpg" width="1920" height="1080" alt="Infinireel Crop Preview of a vertical phone clip placed on a soft blurred copy of itself in the 16:9 Master, with the 9:16 Short and 1:1 square crops beside it" loading="lazy">
+        </div>
+        <div class="screen flip">
+          <div class="txt">
+            <p class="eyebrow">Six platforms of text</p>
+            <h3>Titles, descriptions, tags and captions in one click</h3>
+            <p>AI looks at a frame of your clip and writes the text for YouTube, Shorts, TikTok, Reels, Instagram, Pinterest and Facebook, each within that platform's limits, with a character count beside every field. Read it over, then copy one field or all of them.</p>
+          </div>
+          <img class="shot" src="images/screenshots/04_publish.jpg" width="1920" height="1080" alt="Infinireel Publish page: AI-written YouTube title, description and tags, and captions for Shorts, TikTok, Reels, Instagram, Pinterest and Facebook, each with a character count and a Copy button" loading="lazy">
+        </div>
+        <div class="screen">
+          <div class="txt">
+            <p class="eyebrow">Ready to upload</p>
+            <h3>Play it, then open the Delivery folder</h3>
+            <p>When the render is done, the Review page lets you play every video. One click on Delivery Folder opens a subfolder per platform, each with its video and the text to paste.</p>
+          </div>
+          <img class="shot" src="images/screenshots/03_review.jpg" width="1920" height="1080" alt="Infinireel Review page: render summary with View Production Log, Open Output Folder and Delivery Folder buttons, and the finished Master, Short and square videos ready to play" loading="lazy">
+        </div>
+      </div>
       <p class="note"><strong>Rendering happens on your own PC</strong>, using your graphics card when it can. No uploads, no cloud fees, no waiting in a queue.</p>
     </div>
   </section>
@@ -734,33 +781,20 @@
   </section>
 
   <!-- Screens -->
-  <section>
+  <section id="screens" aria-labelledby="screens-h">
     <div class="wrap">
       <p class="eyebrow">A look inside</p>
-      <h2>See every format before you render</h2>
-      <p class="lead">Pictures from the app's Quick Start guide. The released app may look slightly different.</p>
-      <div class="screens">
-        <div class="screen">
-          <div class="txt">
-            <h3>Frame every format at once</h3>
-            <p>Pick your lengths, then drag the Shorts and square boxes over the clip. The preview shows each crop with its on-screen text.</p>
-          </div>
-          <img class="shot" src="images/step2.jpg" alt="Infinireel screen: choosing Master, Shorts and Social lengths, with a crop preview of a forest waterfall in three formats" loading="lazy" width="760" height="370">
-        </div>
-        <div class="screen flip">
-          <div class="txt">
-            <h3>Your words, on screen</h3>
-            <p>Type a welcome line, a subscribe reminder and a closing line for each format, or let Auto-Generate All write them.</p>
-          </div>
-          <img class="shot" src="images/step3.jpg" alt="Infinireel screen: welcome, midpoint and end call-to-action text for the Master video" loading="lazy" width="760" height="365">
-        </div>
-        <div class="screen">
-          <div class="txt">
-            <h3>Copy, paste, publish</h3>
-            <p>Titles, descriptions and tags for every platform, ready to check and copy one by one or all at once.</p>
-          </div>
-          <img class="shot" src="images/step5.jpg" alt="Infinireel screen: AI-written YouTube title, description and tags with Copy buttons" loading="lazy" width="760" height="296">
-        </div>
+      <h2 id="screens-h">Your words on every format, and help when you need it</h2>
+      <p class="lead">Screens from the current build. Click a picture to see it full size. The released app may look slightly different.</p>
+      <div class="gallery">
+        <figure class="gal">
+          <a href="images/screenshots/02_ctas_per_format.jpg" target="_blank" rel="noopener"><img src="images/screenshots/02_ctas_per_format.jpg" width="1920" height="1080" alt="Infinireel on-screen text editor for the 9:16 Short: its own welcome, midpoint and end lines, each with position, timing and a Hide option, plus the typography style" loading="lazy"></a>
+          <figcaption><strong>Your words, per format</strong>Each format gets its own welcome, reminder and closing lines, position and style. The app shows exactly when each line appears, and any line can be hidden.</figcaption>
+        </figure>
+        <figure class="gal">
+          <a href="images/screenshots/05_quick_start.jpg" target="_blank" rel="noopener"><img src="images/screenshots/05_quick_start.jpg" width="1920" height="1080" alt="Infinireel Quick Start guide, step 2 of 5: choose your videos and frame them, with numbered callouts on the Compose page" loading="lazy"></a>
+          <figcaption><strong>Guided from the first click</strong>A 5-step illustrated Quick Start guide walks you through your first video, and one-time tips show the next step.</figcaption>
+        </figure>
       </div>
     </div>
   </section>
