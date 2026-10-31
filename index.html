@@ -273,6 +273,9 @@
   .spotlights{margin:56px 0 0}
   .spotlights .eyebrow{margin-bottom:6px}
   .spotlights img{width:100%;height:auto;display:block}
+  a.zoom,.gal a{display:block;cursor:zoom-in}
+  a.zoom img,.gal a img{transition:transform .15s ease,box-shadow .15s ease}
+  a.zoom:hover img{transform:translateY(-2px);box-shadow:0 22px 60px rgba(0,0,0,.55)}
 
   /* Screens gallery */
   .gallery{display:grid;grid-template-columns:1fr 1fr;gap:28px}
@@ -489,7 +492,7 @@
         <a class="btn btn-ghost" href="mailto:hello@infinireel.com?subject=Tell%20me%20when%20Infinireel%20launches">Get launch news by email</a>
       </div>
       <p class="fine"><span>Windows 10 and 11</span> · <span>No subscription</span> · <span>Free trial at launch, no card</span></p>
-      <figure class="hero-shot"><img class="shot" src="images/screenshots/01_compose.jpg" width="1920" height="1080" alt="Infinireel Compose page: Master set to 8 hours, Shorts and Social clips at 30 seconds, and the Crop Preview showing a forest waterfall framed in 16:9, 9:16 and 1:1 with on-screen text" fetchpriority="high"><figcaption>One clip, three formats, framed in one place: the Compose page with the Crop Preview.</figcaption></figure>
+      <figure class="hero-shot"><a class="zoom" href="images/screenshots/01_compose.jpg" target="_blank" rel="noopener" title="Open full size"><img class="shot" src="images/screenshots/01_compose.jpg" width="1920" height="1080" alt="Infinireel Compose page: Master set to 8 hours, Shorts and Social clips at 30 seconds, and the Crop Preview showing a forest waterfall framed in 16:9, 9:16 and 1:1 with on-screen text" fetchpriority="high"></a><figcaption>One clip, three formats, framed in one place: the Compose page with the Crop Preview. Click to see it full size.</figcaption></figure>
     </div>
   </div>
 
@@ -687,7 +690,7 @@
             <h3>Phone video? Odd size? It still fits.</h3>
             <p>Clips that aren't 16:9, vertical phone videos included, are zoomed to fill the frame or placed on a soft blurred copy of themselves. The Crop Preview tells you what it did, and there are no black bars unless you want them.</p>
           </div>
-          <img class="shot" src="images/screenshots/06_any_clip_shape.jpg" width="1920" height="1080" alt="Infinireel Crop Preview of a vertical phone clip placed on a soft blurred copy of itself in the 16:9 Master, with the 9:16 Short and 1:1 square crops beside it" loading="lazy">
+          <a class="zoom" href="images/screenshots/06_any_clip_shape.jpg" target="_blank" rel="noopener" title="Open full size"><img class="shot" src="images/screenshots/06_any_clip_shape.jpg" width="1920" height="1080" alt="Infinireel Crop Preview of a vertical phone clip placed on a soft blurred copy of itself in the 16:9 Master, with the 9:16 Short and 1:1 square crops beside it" loading="lazy"></a>
         </div>
         <div class="screen flip">
           <div class="txt">
@@ -695,7 +698,7 @@
             <h3>Titles, descriptions, tags and captions in one click</h3>
             <p>AI looks at a frame of your clip and writes the text for YouTube, Shorts, TikTok, Reels, Instagram, Pinterest and Facebook, each within that platform's limits, with a character count beside every field. Read it over, then copy one field or all of them.</p>
           </div>
-          <img class="shot" src="images/screenshots/04_publish.jpg" width="1920" height="1080" alt="Infinireel Publish page: AI-written YouTube title, description and tags, and captions for Shorts, TikTok, Reels, Instagram, Pinterest and Facebook, each with a character count and a Copy button" loading="lazy">
+          <a class="zoom" href="images/screenshots/04_publish.jpg" target="_blank" rel="noopener" title="Open full size"><img class="shot" src="images/screenshots/04_publish.jpg" width="1920" height="1080" alt="Infinireel Publish page: AI-written YouTube title, description and tags, and captions for Shorts, TikTok, Reels, Instagram, Pinterest and Facebook, each with a character count and a Copy button" loading="lazy"></a>
         </div>
         <div class="screen">
           <div class="txt">
@@ -703,7 +706,7 @@
             <h3>Play it, then open the Delivery folder</h3>
             <p>When the render is done, the Review page lets you play every video. One click on Delivery Folder opens a subfolder per platform, each with its video and the text to paste.</p>
           </div>
-          <img class="shot" src="images/screenshots/03_review.jpg" width="1920" height="1080" alt="Infinireel Review page: render summary with View Production Log, Open Output Folder and Delivery Folder buttons, and the finished Master, Short and square videos ready to play" loading="lazy">
+          <a class="zoom" href="images/screenshots/03_review.jpg" target="_blank" rel="noopener" title="Open full size"><img class="shot" src="images/screenshots/03_review.jpg" width="1920" height="1080" alt="Infinireel Review page: render summary with View Production Log, Open Output Folder and Delivery Folder buttons, and the finished Master, Short and square videos ready to play" loading="lazy"></a>
         </div>
       </div>
       <p class="note"><strong>Rendering happens on your own PC</strong>, using your graphics card when it can. No uploads, no cloud fees, no waiting in a queue.</p>
@@ -785,7 +788,7 @@
     <div class="wrap">
       <p class="eyebrow">A look inside</p>
       <h2 id="screens-h">Your words on every format, and help when you need it</h2>
-      <p class="lead">Screens from the current build. Click a picture to see it full size. The released app may look slightly different.</p>
+      <p class="lead">Screens from the current build. Click any picture on this page to see it full size. The released app may look slightly different.</p>
       <div class="gallery">
         <figure class="gal">
           <a href="images/screenshots/02_ctas_per_format.jpg" target="_blank" rel="noopener"><img src="images/screenshots/02_ctas_per_format.jpg" width="1920" height="1080" alt="Infinireel on-screen text editor for the 9:16 Short: its own welcome, midpoint and end lines, each with position, timing and a Hide option, plus the typography style" loading="lazy"></a>
